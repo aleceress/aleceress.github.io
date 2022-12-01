@@ -6,14 +6,36 @@ img: assets/img/ftemotion.png
 importance: 1
 category: personal
 ---
+<h2> <b>Introduction</b> </h2>
 
-Sooo. At some point in my life, like almost everyone I guess, I took the [16 Personalities Test](https://www.16personalities.com/free-personality-test). 
+Sooo. At some point in my adolescence, like many other people I guess, I took the [16 Personalities Test](https://www.16personalities.com/free-personality-test). Once I saw the results, I clearly remember this feeling of being understood: matching my characteristics with an abstract model shared by other people made me feel part of a crowd, even without actually seing it.
 
-Years later, I don't even remember how, I literally became _obsessed_ with this personality classification, spending my all summer reading about it and discovering that there was a world behind. The more I read and learned, the more I was fascinated.  
-the more I was trying to diagnosticate people around me, trying to _type_ them and matching their actions with my expectations based on that.
+Years later - don't even remember how - I literally became <i>obsessed</i> with this personality classification, spending my whole summer reading about it and discovering a world behind it. The more I read and learned, the more I was fascinated. I started trying to _type_ people around me and matching their actions with my expectations based on that. This also gave me a sense of protection: I finally had a tool to <i>model</i> others, and that would have reduced the uncertainty!
+
+Well.. I had become <i>a little too obsessed</i>, to the point that I couldn't filter out the model from reality anymore. So I decided to quit.
+
+<b>Fast forward</b>: now that I'm an older oldie, I've decided to hug that little girl and start an MBTI-based investigation, using the new tools data science gave me. In particular, this project aims at answering the following question: 
+
+_Is there a correlation between Myers-Briggs type and the sentiment expressed in written comunication?_
+
+<h2> <b>The data</b> </h2>
+
+To perform any kind analysis, we first need data. Better if a lot of them.
+
+There's a big reddit world for Myers-Briggs fans. In particular, there's a subreddit for each personality type.
+You don't need to test as a particular personality to write on the subreddit, but from an empirical observation I saw that this is what happens in most of the cases. Therefore, I applied the analysis on subreddit posts, with the approximation of labeling them as written by the associated personality. If you want to be more precise, you could change the question in:
+
+ <i>Is there a correlation between Myers-Briggs subreddit and the sentiment expressed in its post?</i>
 
 
+<h2> <b>The data</b> <h2>
 
+<h3> <b>Type analysis</b> <h2>
+
+{% include plotly_graph.html content="This is my sample note." %}
+
+<h3> <b> Aggregate Analysis </b> <h2>
+    
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
@@ -54,21 +76,3 @@ You describe how you toiled, sweated, *bled* for your project, and then... you r
     You can also have artistically styled 2/3 + 1/3 images, like these.
 </div>
 
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}

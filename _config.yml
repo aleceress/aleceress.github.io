@@ -57,6 +57,7 @@ max_width: 800px
 serve_og_meta: false # Include Open Graph meta tags in the HTML head
 serve_schema_org: false # Include Schema.org in the HTML head
 og_image: # The site-wide (default for all links) Open Graph preview image
+htmlwidgets: true
 
 # -----------------------------------------------------------------------------
 # Social integration
@@ -185,7 +186,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-link-attributes
   - jekyll-twitter-plugin
-  - jemoji
 
 # Sitemap settings
 defaults:
