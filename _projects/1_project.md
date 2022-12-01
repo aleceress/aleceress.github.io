@@ -1,24 +1,18 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: assets/img/12.jpg
+title: MBTI Sentiment Analysis
+description: A Sentiment Analysis over different Myers-Briggs Personality subreddits
+img: assets/img/ftemotion.png
 importance: 1
-category: work
+category: personal
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Sooo. At some point in my life, like almost everyone I guess, I took the [16 Personalities Test](https://www.16personalities.com/free-personality-test). 
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Years later, I don't even remember how, I literally became _obsessed_ with this personality classification, spending my all summer reading about it and discovering that there was a world behind. The more I read and learned, the more I was fascinated.  
+the more I was trying to diagnosticate people around me, trying to _type_ them and matching their actions with my expectations based on that.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
