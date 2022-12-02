@@ -15,7 +15,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-.. And uhm, you already know my name.
+...and uhm, you already know my name.
 
 
 When I was a child I wanted to become a writer, even wrote a poem called _tears_ and won a competition in 2006. This passion encouraged me to do Classical Studies, which I believe shaped my thinking in so many ways.

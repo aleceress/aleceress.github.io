@@ -6,35 +6,48 @@ img: assets/img/ftemotion.png
 importance: 1
 category: personal
 ---
-<h2> <b>Introduction</b> </h2>
 
-Sooo. At some point in my adolescence, like many other people I guess, I took the [16 Personalities Test](https://www.16personalities.com/free-personality-test). Once I saw the results, I clearly remember this feeling of being understood: matching my characteristics with an abstract model shared by other people made me feel part of a crowd, even without actually seing it.
+## Introduction
 
-Years later - don't even remember how - I literally became <i>obsessed</i> with this personality classification, spending my whole summer reading about it and discovering a world behind it. The more I read and learned, the more I was fascinated. I started trying to _type_ people around me and matching their actions with my expectations based on that. This also gave me a sense of protection: I finally had a tool to <i>model</i> others, and that would have reduced the uncertainty!
+Sooo... at some point in my adolescence, like many other people I guess, I took the [16 Personalities Test](https://www.16personalities.com/free-personality-test). Once I saw the results, I clearly remember this feeling of being understood: matching my characteristics with an abstract model shared by other people made me feel part of a crowd, even without actually seing it.
 
-Well.. I had become <i>a little too obsessed</i>, to the point that I couldn't filter out the model from reality anymore. So I decided to quit.
+Years later - don't even remember how - I literally became _obsessed_ with this personality classification, spending my whole summer reading about it and discovering a world behind it. The more I read and learned, the more I was fascinated. I started trying to _type_ people around me and matching their actions with my expectations based on that. This also gave me a sense of protection: I finally had a tool to _model_ others, and that would have reduced the uncertainty!
 
-<b>Fast forward</b>: now that I'm an older oldie, I've decided to hug that little girl and start an MBTI-based investigation, using the new tools data science gave me. In particular, this project aims at answering the following question: 
+Well.. I had become _a little too obsessed_, to the point that I couldn't filter out the model from reality anymore. So I decided to quit.
+
+**Fast forward**: now that I'm an older oldie, I've decided to hug that little girl and start an MBTI-based investigation, using the new tools data science gave me. In particular, this project aims at answering the following question: 
 
 _Is there a correlation between Myers-Briggs type and the sentiment expressed in written comunication?_
 
-<h2> <b>The data</b> </h2>
-
+## The data
 To perform any kind analysis, we first need data. Better if a lot of them.
 
-There's a big reddit world for Myers-Briggs fans. In particular, there's a subreddit for each personality type.
-You don't need to test as a particular personality to write on the subreddit, but from an empirical observation I saw that this is what happens in most of the cases. Therefore, I applied the analysis on subreddit posts, with the approximation of labeling them as written by the associated personality. If you want to be more precise, you could change the question in:
+There's a big Reddit world for Myers-Briggs fans. In particular, there's a subreddit for each personality type.
+You don't need to test as a particular personality to write on the corresponding subreddit, but from an empirical observation I saw that this is what happens in most of the cases. Therefore, I applied the analysis on subreddit posts, with the approximation of labeling them as written by the associated personality. If you want to be more precise, you can change the original question in:
 
- <i>Is there a correlation between Myers-Briggs subreddit and the sentiment expressed in its post?</i>
+_Is there a correlation between Myers-Briggs subreddit and the sentiment expressed in its post?_
 
 
-<h2> <b>The data</b> <h2>
+## Sentiment analysis
 
-<h3> <b>Type analysis</b> <h2>
+### Type analysis
 
-{% include plotly_graph.html content="This is my sample note." %}
+### Aggregate Analysis
 
-<h3> <b> Aggregate Analysis </b> <h2>
+
+<div id="tester" class="row">
+<script>
+	TESTER = document.getElementById('tester');
+
+	Plotly.newPlot( TESTER, [{
+	x: [1, 2, 3, 4, 5],
+	y: [1, 2, 4, 8, 16] }], {
+	margin: { t: 0 } } );
+
+</script>
+</div>
+
+
     
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
