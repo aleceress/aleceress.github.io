@@ -11,6 +11,8 @@ category: personal
 <script defer src="{{ '/assets/js/projects/project_1/typeemotions.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/projects/project_1/typesentiment.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/projects/project_1/typesemotions-comp.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/projects/project_1/typessentiment-comp.js' | relative_url }}"></script>
+
 
 
 ## Introduction
@@ -45,7 +47,7 @@ _Is there a correlation between Myers-Briggs subreddit and the sentiment express
     <div class="bubbleplot" data-num="0">
     <div class="plot" id="plotdiv"></div>
       <div class="control-row">
-        Type: <select class="typedata">
+        Type: <select class="typedata" style = "padding: 0px">
         </select>
       </div>
     </div>
@@ -73,6 +75,19 @@ _Is there a correlation between Myers-Briggs subreddit and the sentiment express
     <div class="plot2" id="plotemotioncomp"></div>
       <div class="control-row">
         Emotion: <select class="typedata2">
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="showcase__section" id="bubble">
+  <div class="spacer --small"></div>
+  <div id="bubbleplots">
+    <div class="bubbleplot" data-num="3">
+    <div class="plot3" id="plotsentimentcomp"></div>
+      <div class="control-row">
+        Emotion: <select class="typedata3">
         </select>
       </div>
     </div>

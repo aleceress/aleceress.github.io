@@ -1,59 +1,52 @@
 
-  d3.csv("../types_emotions.csv", function(err, rows){
+  d3.csv("../types_sentiment_percentage.csv", function(err, rows){
  
     function unpack(rows, key) {
         return rows.map(function(row) { return row[key]; });
     }
      
-    var allEmotionsNames = ["love","joy","anger", "sadness", "surprise","fear"],
-        allTypesNames = unpack(rows, "type"),
-        allLove = unpack(rows, 'love'),
-        allJoy = unpack(rows, "joy"),
-        allAnger = unpack(rows, "anger"),
-        allSadness = unpack(rows, "sadness"),
-        allSurprise = unpack(rows, "surprise"),
-        allFear = unpack(rows, "fear"),
-        listofEmotions = [],
-        currentEmotions = [];
+    var allSentimentNames = ["positive", "negative"],
+        allTypesNames = unpack(rows, 'type'),
+        allPositive = unpack(rows, 'POSITIVE'),
+        allNegative = unpack(rows, 'NEGATIVE'),
+        listofSentiment = [],
+        currentSentiment = [];
+
      
-    
-     
-    for (var i = 0; i < allEmotionsNames.length; i++ ){
-        if (listofEmotions.indexOf(allEmotionsNames[i]) === -1 ){
-            listofEmotions.push(allEmotionsNames[i]);
+ 
+    console.log("ooo")
+    for (var i = 0; i < allSentimentNames.length; i++ ){
+        if (listofSentiment.indexOf(allSentimentNames[i]) === -1 ){
+            listofSentiment.push(allSentimentNames[i]);
         }
     }
      
     
-    function getEmotionData(chosenEmotion) {
-        currentEmotions = []
+
+    function getSentimentData(chosenSentiment) {
+
+        currentSentiment = []
 
         for (var i = 0 ; i < allTypesNames.length ; i++){
-            if (chosenEmotion === "love") {
-                currentEmotions.push(allLove[i])
-            } else if (chosenEmotion === "anger") {
-                currentEmotions.push(allAnger[i])
-            } else if (chosenEmotion === "joy") {
-                currentEmotions.push(allJoy[i])
-            } else if (chosenEmotion == "surprise") {
-                currentEmotions.push(allSurprise[i])
-            } else if (chosenEmotion == "sadness") {
-                currentEmotions.push(allSadness[i])
-            } else if (chosenEmotion == "fear") {
-                currentEmotions.push(allFear[i])
+            if (chosenSentiment === "positive") {
+                currentSentiment.push(allPositive[i])
+            } else if (chosenSentiment === "negative") {
+                currentSentiment.push(allNegative[i])
             }
         }
     
     };
+
+    
      
     // Default Type Data
-    setBarChart('love');
+    setBarChart('positive');
      
-    function setBarChart(chosenEmotion) {
-        getEmotionData(chosenEmotion);
+    function setBarChart(chosenSentiment) {
+        getSentimentData(chosenSentiment);
      
         var trace1 = {
-            x: [currentEmotions[0]],
+            x: [currentSentiment[0]],
             y: [allTypesNames[0]],
             name: allTypesNames[0],
             orientation: 'h',
@@ -65,7 +58,7 @@
           };
           
           var trace2 = {
-            x: [currentEmotions[1]],
+            x: [currentSentiment[1]],
             y: [allTypesNames[1]],
             name: allTypesNames[1],
             orientation: 'h',
@@ -77,7 +70,7 @@
             };
         
             var trace3 = {
-                x: [currentEmotions[2]],
+                x: [currentSentiment[2]],
                 y: [allTypesNames[2]],
                 name: allTypesNames[2],
                 orientation: 'h',
@@ -89,7 +82,7 @@
             };
         
             var trace4 = {
-                x: [currentEmotions[3]],
+                x: [currentSentiment[3]],
                 y: [allTypesNames[3]],
                 name: allTypesNames[3],
                 orientation: 'h',
@@ -101,7 +94,7 @@
             };
         
             var trace5 = {
-                x: [currentEmotions[4]],
+                x: [currentSentiment[4]],
                 y: [allTypesNames[4]],
                 name: allTypesNames[4],
                 orientation: 'h',
@@ -113,7 +106,7 @@
             };
         
             var trace6 = {
-                x: [currentEmotions[5]],
+                x: [currentSentiment[5]],
                 y: [allTypesNames[5]],
                 name: allTypesNames[5],
                 orientation: 'h',
@@ -125,7 +118,7 @@
             };
         
             var trace7 = {
-                x: [currentEmotions[6]],
+                x: [currentSentiment[6]],
                 y: [allTypesNames[6]],
                 name: allTypesNames[6],
                 orientation: 'h',
@@ -137,7 +130,7 @@
             };
         
             var trace8 = {
-                x: [currentEmotions[7]],
+                x: [currentSentiment[7]],
                 y: [allTypesNames[7]],
                 name: allTypesNames[7],
                 orientation: 'h',
@@ -149,7 +142,7 @@
             };
         
             var trace9 = {
-                x: [currentEmotions[8]],
+                x: [currentSentiment[8]],
                 y: [allTypesNames[8]],
                 name: allTypesNames[8],
                 orientation: 'h',
@@ -161,7 +154,7 @@
             };
         
             var trace10 = {
-                x: [currentEmotions[9]],
+                x: [currentSentiment[9]],
                 y: [allTypesNames[9]],
                 name: allTypesNames[9],
                 orientation: 'h',
@@ -173,7 +166,7 @@
             };
         
             var trace11 = {
-                x: [currentEmotions[10]],
+                x: [currentSentiment[10]],
                 y: [allTypesNames[10]],
                 name: allTypesNames[10],
                 orientation: 'h',
@@ -185,7 +178,7 @@
             };
         
             var trace12 = {
-                x: [currentEmotions[11]],
+                x: [currentSentiment[11]],
                 y: [allTypesNames[11]],
                 name: allTypesNames[11],
                 orientation: 'h',
@@ -197,7 +190,7 @@
             };
         
             var trace13 = {
-                x: [currentEmotions[12]],
+                x: [currentSentiment[12]],
                 y: [allTypesNames[12]],
                 name: allTypesNames[12],
                 orientation: 'h',
@@ -209,7 +202,7 @@
             };
         
             var trace14 = {
-                x: [currentEmotions[13]],
+                x: [currentSentiment[13]],
                 y: [allTypesNames[13]],
                 name: allTypesNames[13],
                 orientation: 'h',
@@ -221,7 +214,7 @@
             };
         
             var trace15 = {
-                x: [currentEmotions[14]],
+                x: [currentSentiment[14]],
                 y: [allTypesNames[14]],
                 name: allTypesNames[14],
                 orientation: 'h',
@@ -233,7 +226,7 @@
             };
         
             var trace16 = {
-                x: [currentEmotions[15]],
+                x: [currentSentiment[15]],
                 y: [allTypesNames[15]],
                 name: allTypesNames[15],
                 orientation: 'h',
@@ -247,17 +240,19 @@
           var data = [trace1, trace2, trace3, trace4, trace5, trace6, trace7, trace8, trace9, trace10, trace11, trace12, trace13, trace14, trace15, trace16];
           
           var layout = {
-            title: chosenEmotion.concat(" comparison"),
+            title: chosenSentiment.concat(" comparison"),
             barmode: 'group',
             margin: {b: 30}
           };
      
-        Plotly.newPlot('plotemotioncomp', data, layout);
+        Plotly.newPlot('plotsentimentcomp', data, layout);
     };
+
+
      
-    var innerContainer = document.querySelector('[data-num="2"'),
-        plotEl = innerContainer.querySelector('.plot2'),
-        typeSelector = innerContainer.querySelector('.typedata2');
+    var innerContainer = document.querySelector('[data-num="3"'),
+        plotEl = innerContainer.querySelector('.plot3'),
+        typeSelector = innerContainer.querySelector('.typedata3');
      
     
 
@@ -270,7 +265,7 @@
     }
     
      
-    assignOptions(listofEmotions, typeSelector);
+    assignOptions(listofSentiment, typeSelector);
      
     function updateType(){
         setBarChart(typeSelector.value);

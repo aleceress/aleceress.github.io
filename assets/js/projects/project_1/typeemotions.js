@@ -61,7 +61,7 @@ function setBarChart(chosenType) {
         }
     };
  
-    var layout = {title: chosenType.concat(" emotions")};
+    var layout = {title: chosenType.concat(" emotions"), margin: {b: 25}};
 
     var data = [trace1]
  
