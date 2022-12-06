@@ -12,7 +12,15 @@ category: personal
 <script defer src="{{ '/assets/js/projects/project_1/typesentiment.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/projects/project_1/typesemotions-comp.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/projects/project_1/typessentiment-comp.js' | relative_url }}"></script>
+<link rel="stylesheet" href="{{ '/assets/css/slick.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/slick-theme.css' | relative_url }}">
 
+
+<script src="{{ '/assets/js/jquery-2.1.1.js' | relative_url }}"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.3.15/slick.min.js"></script>
+<script src="{{ '/assets/js/slick.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/slick.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
 
 
 ## Introduction
@@ -37,6 +45,8 @@ _Is there a correlation between Myers-Briggs subreddit and the sentiment express
 
 
 ## Sentiment analysis
+
+<br>
 
 ### Type analysis
 
@@ -94,8 +104,22 @@ _Is there a correlation between Myers-Briggs subreddit and the sentiment express
   </div>
 </div>
 
+<br>
+
+<div class ="prova">
+  <div style = "text-align:center"><img src="/assets/img/entj_wordcloud.png" style = "margin:auto" width="700" height="350" center=true></div>
+  <div style = "text-align:center"><img src="/assets/img/enfj_wordcloud.png" style = "margin:auto" width="700" height="350" center=true></div>
+  <div style = "text-align:center"><img src="/assets/img/enfp_wordcloud.png" style ="margin:auto" width="700" height="350" center=true></div>
+</div>
+
+<script>
+    $(".prova").slick()
+</script>
+
+<br>
 
 ### Aggregate Analysis
+
 
 
 
