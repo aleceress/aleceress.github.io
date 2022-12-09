@@ -107,16 +107,35 @@ _Is there a correlation between Myers-Briggs subreddit and the sentiment express
 <br>
 
 <div class ="prova">
-  <div style = "text-align:center"><img src="/assets/img/entj_wordcloud.png" style = "margin:auto" width="700" height="350" center=true></div>
-  <div style = "text-align:center"><img src="/assets/img/enfj_wordcloud.png" style = "margin:auto" width="700" height="350" center=true></div>
-  <div style = "text-align:center"><img src="/assets/img/enfp_wordcloud.png" style ="margin:auto" width="700" height="350" center=true></div>
+  
+  <div style = "text-align:center"><img src="/assets/img/infj_wordcloud.png" style = "margin:auto; padding: 10px" width="700" height="350" center=true><caption style="text-align:right"> INFJ </caption></div>
+  <div style = "text-align:center"><img src="/assets/img/intj_wordcloud.png" style = "margin:auto; padding: 10px" width="700" height="350" center=true><caption style="text-align:right"> INTJ </caption></div>
+  <div style = "text-align:center"><img src="/assets/img/infp_wordcloud.png" style = "margin:auto; padding: 10px" width="700" height="350" center=true><caption style="text-align:right"> INFP </caption></div>
+  <div style = "text-align:center"><img src="/assets/img/intj_wordcloud.png" style = "margin:auto; padding: 10px" width="700" height="350" center=true><caption style="text-align:right"> INTP </caption></div>
+  <div style = "text-align:center"><img src="/assets/img/entj_wordcloud.png" style = "margin:auto; padding: 10px" width="700" height="350" center=true><caption style="text-align:right"> ENTJ </caption></div>
+   <div style = "text-align:center"><img src="/assets/img/enfp_wordcloud.png" style ="margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ENFP </caption></div>
+    <div style = "text-align:center"><img src="/assets/img/entp_wordcloud.png" style ="margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ENTP </caption></div>
+  <div style = "text-align:center"><img src="/assets/img/enfj_wordcloud.png" style = "margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ENFJ </caption></div>
+  <div style = "text-align:center"><img src="/assets/img/isfj_wordcloud.png" style = "margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ISFJ </caption></div>
+   <div style = "text-align:center"><img src="/assets/img/istj_wordcloud.png" style = "margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ISTJ </caption></div>
+   <div style = "text-align:center"><img src="/assets/img/istp_wordcloud.png" style = "margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ISTP </caption></div>
+   <div style = "text-align:center"><img src="/assets/img/isfp_wordcloud.png" style = "margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ISFP </caption></div>
+  <div style = "text-align:center"><img src="/assets/img/esfj_wordcloud.png" style ="margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ESFJ </caption></div>
+   <div style = "text-align:center"><img src="/assets/img/estj_wordcloud.png" style ="margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ESTJ </caption></div>
+    <div style = "text-align:center"><img src="/assets/img/estp_wordcloud.png" style ="margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ESTP </caption></div>
+  <div style = "text-align:center"><img src="/assets/img/esfp_wordcloud.png" style ="margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ESFP </caption></div>
+  
 </div>
 
 <script>
-    $(".prova").slick()
+    $(".prova").slick({
+      dots: true
+    })
 </script>
 
 <br>
+
+
 
 ### Aggregate Analysis
 

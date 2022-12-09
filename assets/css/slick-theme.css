@@ -205,15 +205,15 @@
 
 
 .slick-prev:before {
-    content: "<";
-    color: black;
+    content: "\2190";
+    color: grey;
     font-size: 25px;
   }
 
 
   .slick-next:before {
-    content: ">";
-    color: black;
+    content: '\2192';
+    color: grey;
     font-size: 25px;
     padding: 1px
   }
