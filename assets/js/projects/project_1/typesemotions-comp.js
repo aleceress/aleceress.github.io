@@ -271,12 +271,7 @@
     
      
     assignOptions(listofEmotions, typeSelector);
-     
-    function updateType(){
-        setBarChart(typeSelector.value);
-    }
-     
-    typeSelector.addEventListener('change', updateType, false);
+
     });
     
      

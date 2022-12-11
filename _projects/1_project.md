@@ -12,6 +12,7 @@ category: personal
 <script defer src="{{ '/assets/js/projects/project_1/typesentiment.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/projects/project_1/typesemotions-comp.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/projects/project_1/typessentiment-comp.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/projects/project_1/traitsemotions-comp.js' | relative_url }}"></script>
 <link rel="stylesheet" href="{{ '/assets/css/slick.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/slick-theme.css' | relative_url }}">
 
@@ -139,7 +140,17 @@ _Is there a correlation between Myers-Briggs subreddit and the sentiment express
 
 ### Aggregate Analysis
 
+<div class="showcase__section" id="bubble">
+  <div class="spacer --small"></div>
+  <div id="bubbleplots">
+    <div class="bubbleplot" data-num="4">
+    <div class="plot4" id="traitemotioncomp"></div>
+      <div class="control-row">
+        Traits to compare: <select class="typedata4">
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
 
-
-
-
+<div id = "trait-comp-description" style= "text-align:center; padding:10px"></div>
