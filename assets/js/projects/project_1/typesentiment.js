@@ -50,7 +50,7 @@ function setPieChart(chosenType) {
 
     var data = [trace1]
 
-    var layout = { title: chosenType.concat(" comparison"),  margin: {b: 20}};
+    var layout = { title: chosenType.concat(" sentiment percentage"),  margin: {b: 20}};
  
     Plotly.newPlot('plotsentimentdiv', data, layout);
 };

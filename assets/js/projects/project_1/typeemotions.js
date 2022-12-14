@@ -61,7 +61,10 @@ function setBarChart(chosenType) {
         }
     };
  
-    var layout = {title: chosenType.concat(" emotions"), margin: {b: 25}};
+    var layout = {
+                    title: chosenType.concat(" average emotions"), 
+                    margin: {b: 25},
+                };
 
     var data = [trace1]
  
@@ -87,6 +90,7 @@ assignOptions(listofTypes, typeSelector);
 function updateType(){
     setBarChart(typeSelector.value);
 }
+
  
 typeSelector.addEventListener('change', updateType, false);
 });

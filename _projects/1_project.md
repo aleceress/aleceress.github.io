@@ -13,6 +13,14 @@ category: personal
 <script defer src="{{ '/assets/js/projects/project_1/typesemotions-comp.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/projects/project_1/typessentiment-comp.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/projects/project_1/traitsemotions-comp.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/projects/project_1/traitsentiment-comp.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/projects/project_1/cognitivefunctions-sentiment.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/projects/project_1/cognitivefunctions-emotion.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/projects/project_1/clustering.js' | relative_url }}"></script>
+
+
+
+
 <link rel="stylesheet" href="{{ '/assets/css/slick.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/slick-theme.css' | relative_url }}">
 
@@ -98,7 +106,7 @@ _Is there a correlation between Myers-Briggs subreddit and the sentiment express
     <div class="bubbleplot" data-num="3">
     <div class="plot3" id="plotsentimentcomp"></div>
       <div class="control-row">
-        Emotion: <select class="typedata3">
+        Sentiment: <select class="typedata3">
         </select>
       </div>
     </div>
@@ -107,7 +115,7 @@ _Is there a correlation between Myers-Briggs subreddit and the sentiment express
 
 <br>
 
-<div class ="prova">
+<div class ="wordclouds">
   
   <div style = "text-align:center"><img src="/assets/img/infj_wordcloud.png" style = "margin:auto; padding: 10px" width="700" height="350" center=true><caption style="text-align:right"> INFJ </caption></div>
   <div style = "text-align:center"><img src="/assets/img/intj_wordcloud.png" style = "margin:auto; padding: 10px" width="700" height="350" center=true><caption style="text-align:right"> INTJ </caption></div>
@@ -129,10 +137,14 @@ _Is there a correlation between Myers-Briggs subreddit and the sentiment express
 </div>
 
 <script>
-    $(".prova").slick({
+    $(".wordclouds").slick({
       dots: true
     })
 </script>
+
+<body>
+	<div id='clustering'></div>
+</body>
 
 <br>
 
@@ -153,4 +165,48 @@ _Is there a correlation between Myers-Briggs subreddit and the sentiment express
   </div>
 </div>
 
-<div id = "trait-comp-description" style= "text-align:center; padding:10px"></div>
+<div id = "trait-comp-description" style= "text-align:center; padding:10px; font-size:80% "></div>
+
+<br>
+
+<div class="showcase__section" id="bubble">
+  <div class="spacer --small"></div>
+  <div id="bubbleplots">
+    <div class="bubbleplot" data-num="5">
+    <div class="plot5" id="traitsentimentcomp"></div>
+      <div class="control-row">
+        Traits to compare: <select class="typedata5">
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id = "trait-sentiment-description" style= "text-align:center; padding:10px; font-size:80% "></div>
+
+<div class="showcase__section" id="bubble">
+  <div class="spacer --small"></div>
+  <div id="bubbleplots">
+    <div class="bubbleplot" data-num="6">
+    <div class="plot6" id="functionsemotioncomp"></div>
+      <div class="control-row">
+        Emotions to compare: <select class="typedata6">
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="showcase__section" id="bubble">
+  <div class="spacer --small"></div>
+  <div id="bubbleplots">
+    <div class="bubbleplot" data-num="7">
+    <div class="plot7" id="functionsentimentcomp"></div>
+      <div class="control-row">
+        Sentiment to compare: <select class="typedata7">
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+

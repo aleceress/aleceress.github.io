@@ -14,7 +14,7 @@
 
      
  
-    console.log("ooo")
+
     for (var i = 0; i < allSentimentNames.length; i++ ){
         if (listofSentiment.indexOf(allSentimentNames[i]) === -1 ){
             listofSentiment.push(allSentimentNames[i]);
@@ -240,7 +240,7 @@
           var data = [trace1, trace2, trace3, trace4, trace5, trace6, trace7, trace8, trace9, trace10, trace11, trace12, trace13, trace14, trace15, trace16];
           
           var layout = {
-            title: chosenSentiment.concat(" comparison"),
+            title: chosenSentiment.concat(" sentiment percentage comparison"),
             barmode: 'group',
             margin: {b: 30}
           };

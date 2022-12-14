@@ -1,12 +1,12 @@
 
-  d3.csv("../types_emotions.csv", function(err, rows){
+  d3.csv("../cognitivefunctions-emotion.csv", function(err, rows){
  
     function unpack(rows, key) {
         return rows.map(function(row) { return row[key]; });
     }
      
     var allEmotionsNames = ["love","joy","anger", "sadness", "surprise","fear"],
-        allTypesNames = unpack(rows, "type"),
+        allFunctionsNames = unpack(rows, "dominant-function"),
         allLove = unpack(rows, 'love'),
         allJoy = unpack(rows, "joy"),
         allAnger = unpack(rows, "anger"),
@@ -28,7 +28,7 @@
     function getEmotionData(chosenEmotion) {
         currentEmotions = []
 
-        for (var i = 0 ; i < allTypesNames.length ; i++){
+        for (var i = 0 ; i < allFunctionsNames.length ; i++){
             if (chosenEmotion === "love") {
                 currentEmotions.push(allLove[i])
             } else if (chosenEmotion === "anger") {
@@ -43,6 +43,7 @@
                 currentEmotions.push(allFear[i])
             }
         }
+        
     
     };
      
@@ -51,11 +52,12 @@
      
     function setBarChart(chosenEmotion) {
         getEmotionData(chosenEmotion);
-     
+
+
         var trace1 = {
             x: [currentEmotions[0]],
-            y: [allTypesNames[0]],
-            name: allTypesNames[0],
+            y: [allFunctionsNames[0]],
+            name: allFunctionsNames[0],
             orientation: 'h',
             marker: {
               color: 'coral',
@@ -66,8 +68,8 @@
           
           var trace2 = {
             x: [currentEmotions[1]],
-            y: [allTypesNames[1]],
-            name: allTypesNames[1],
+            y: [allFunctionsNames[1]],
+            name: allFunctionsNames[1],
             orientation: 'h',
             type: 'bar',
             marker: {
@@ -78,8 +80,8 @@
         
             var trace3 = {
                 x: [currentEmotions[2]],
-                y: [allTypesNames[2]],
-                name: allTypesNames[2],
+                y: [allFunctionsNames[2]],
+                name: allFunctionsNames[2],
                 orientation: 'h',
                 type: 'bar',
                 marker: {
@@ -90,8 +92,8 @@
         
             var trace4 = {
                 x: [currentEmotions[3]],
-                y: [allTypesNames[3]],
-                name: allTypesNames[3],
+                y: [allFunctionsNames[3]],
+                name: allFunctionsNames[3],
                 orientation: 'h',
                 type: 'bar',
                 marker: {
@@ -102,8 +104,8 @@
         
             var trace5 = {
                 x: [currentEmotions[4]],
-                y: [allTypesNames[4]],
-                name: allTypesNames[4],
+                y: [allFunctionsNames[4]],
+                name: allFunctionsNames[4],
                 orientation: 'h',
                 type: 'bar',
                 marker: {
@@ -114,8 +116,8 @@
         
             var trace6 = {
                 x: [currentEmotions[5]],
-                y: [allTypesNames[5]],
-                name: allTypesNames[5],
+                y: [allFunctionsNames[5]],
+                name: allFunctionsNames[5],
                 orientation: 'h',
                 type: 'bar',
                 marker: {
@@ -126,8 +128,8 @@
         
             var trace7 = {
                 x: [currentEmotions[6]],
-                y: [allTypesNames[6]],
-                name: allTypesNames[6],
+                y: [allFunctionsNames[6]],
+                name: allFunctionsNames[6],
                 orientation: 'h',
                 type: 'bar',
                 marker: {
@@ -138,8 +140,8 @@
         
             var trace8 = {
                 x: [currentEmotions[7]],
-                y: [allTypesNames[7]],
-                name: allTypesNames[7],
+                y: [allFunctionsNames[7]],
+                name: allFunctionsNames[7],
                 orientation: 'h',
                 type: 'bar',
                 marker: {
@@ -147,117 +149,23 @@
                 width: 1
                 }
             };
-        
-            var trace9 = {
-                x: [currentEmotions[8]],
-                y: [allTypesNames[8]],
-                name: allTypesNames[8],
-                orientation: 'h',
-                type: 'bar',
-                marker: {
-                color: 'pink',
-                width: 1
-                }
-            };
-        
-            var trace10 = {
-                x: [currentEmotions[9]],
-                y: [allTypesNames[9]],
-                name: allTypesNames[9],
-                orientation: 'h',
-                type: 'bar',
-                marker: {
-                color: 'mediumpurple',
-                width: 1
-                }
-            };
-        
-            var trace11 = {
-                x: [currentEmotions[10]],
-                y: [allTypesNames[10]],
-                name: allTypesNames[10],
-                orientation: 'h',
-                type: 'bar',
-                marker: {
-                color: 'midnightblue',
-                width: 1
-                }
-            };
-        
-            var trace12 = {
-                x: [currentEmotions[11]],
-                y: [allTypesNames[11]],
-                name: allTypesNames[11],
-                orientation: 'h',
-                type: 'bar',
-                marker: {
-                color: 'blue',
-                width: 1
-                }
-            };
-        
-            var trace13 = {
-                x: [currentEmotions[12]],
-                y: [allTypesNames[12]],
-                name: allTypesNames[12],
-                orientation: 'h',
-                type: 'bar',
-                marker: {
-                color: 'cornflowerblue',
-                width: 1
-                }
-            };
-        
-            var trace14 = {
-                x: [currentEmotions[13]],
-                y: [allTypesNames[13]],
-                name: allTypesNames[13],
-                orientation: 'h',
-                type: 'bar',
-                marker: {
-                color: 'darkturquoise',
-                width: 1
-                }
-            };
-        
-            var trace15 = {
-                x: [currentEmotions[14]],
-                y: [allTypesNames[14]],
-                name: allTypesNames[14],
-                orientation: 'h',
-                type: 'bar',
-                marker: {
-                color: 'lightblue',
-                width: 1
-                }
-            };
-        
-            var trace16 = {
-                x: [currentEmotions[15]],
-                y: [allTypesNames[15]],
-                name: allTypesNames[15],
-                orientation: 'h',
-                type: 'bar',
-                marker: {
-                color: 'black',
-                width: 1
-                }
-            };
           
-          var data = [trace1, trace2, trace3, trace4, trace5, trace6, trace7, trace8, trace9, trace10, trace11, trace12, trace13, trace14, trace15, trace16];
+          var data = [trace1, trace2, trace3, trace4, trace5, trace6, trace7, trace8];
+
           
           var layout = {
             title: chosenEmotion.concat(" average comparison"),
             barmode: 'group',
             margin: {b: 30}
           };
-     
-        Plotly.newPlot('plotemotioncomp', data, layout);
+
+           
+          Plotly.newPlot('functionsemotioncomp', data, layout);
     };
      
-    var innerContainer = document.querySelector('[data-num="2"'),
-        plotEl = innerContainer.querySelector('.plot2'),
-        typeSelector = innerContainer.querySelector('.typedata2');
+    var innerContainer = document.querySelector('[data-num="6"'),
+        plotEl = innerContainer.querySelector('.plot6'),
+        typeSelector = innerContainer.querySelector('.typedata6');
      
     
 
@@ -268,10 +176,9 @@
             selector.appendChild(currentOption);
         }
     }
-    
-     
-    assignOptions(listofEmotions, typeSelector);
 
+    assignOptions(listofEmotions, typeSelector);
+    
     typeSelector.addEventListener('change', updateType, false)
 
     function updateType() {
@@ -279,7 +186,6 @@
     }
      
 
-    console.log("ciao")
     });
     
      
