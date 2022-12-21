@@ -116,9 +116,9 @@ d3.csv("../traits_sentiment.csv", function (err, rows) {
 
     typeSelector.addEventListener('change', updateType, false);
 
-    trait_description_div = document.getElementById("trait-sentiment-description")
+    trait_description_sentiment_div = document.getElementById("trait-sentiment-description")
 
-    var trait_description = {
+    var trait_description_sentiment = {
         "I/E": `
                 <br> <b> chi squared </b> 0 with <b> p value </b> 1 <br>
                 <br> non significant relationship between introversion and sentiment <br>
@@ -138,10 +138,10 @@ d3.csv("../traits_sentiment.csv", function (err, rows) {
 
     }
 
-    trait_description_div.innerHTML = trait_description["I/E"]
+    trait_description_sentiment_div.innerHTML = trait_description_sentiment["I/E"]
 
     typeSelector.addEventListener('change', ()=> {
-       trait_description_div.innerHTML = trait_description[typeSelector.value]
+       trait_description_sentiment_div.innerHTML = trait_description_sentiment[typeSelector.value]
     })
 });
 

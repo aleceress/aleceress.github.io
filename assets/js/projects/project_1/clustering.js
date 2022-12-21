@@ -68,6 +68,13 @@ layout = {
             },
             yaxis: {
                 title: "PCA2"
+            },
+            margin: {
+                l: 50,
+                r: 50,
+                b: 30,
+                t: 50,
+                pad: 4
             }
         };
 

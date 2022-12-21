@@ -136,9 +136,9 @@ d3.csv("../traits_emotions.csv", function (err, rows) {
 
     typeSelector.addEventListener('change', updateType, false);
 
-    trait_description_div = document.getElementById("trait-comp-description")
+    var trait_description_emotions_div = document.getElementById("trait-emotion-description")
 
-    var trait_description = {
+    var trait_description_emotion = {
         "I/E": `
                 <br> <b> Fear:</b> odds ratio:  0.92 ,  p value:  2.84e-07, so <b>8.17%</b> less probable to get a fear score if <b>E</b> <br>
                 <br> <b> Surprise:</b> odds ratio: 1.06 ,  p value:  0, so <b>6.3%</b> more probable to get a surprise  score if <b>E</b> <br>
@@ -174,10 +174,10 @@ d3.csv("../traits_emotions.csv", function (err, rows) {
 
     }
 
-    trait_description_div.innerHTML = trait_description["I/E"]
+    trait_description_emotions_div.innerHTML = trait_description_emotion["I/E"]
 
     typeSelector.addEventListener('change', ()=> {
-       trait_description_div.innerHTML = trait_description[typeSelector.value]
+       trait_description_emotions_div.innerHTML = trait_description_emotion[typeSelector.value]
     })
 });
 
