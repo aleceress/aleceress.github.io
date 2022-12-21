@@ -113,13 +113,13 @@ The obtained values were then __compared__ across different personality types, a
 
 <br>
 
-It looks like _ISFJ_ and _ESFJ_ tend to have the higher _love_ scores, while _INTP_ has the lowest. 
-Expression of _joy_ appears to be relatively uniform across personality types, with a slightly higher score for _ESFP_. According to the analysis of text data, _ESTJ_ posts convey the highest  _anger_ score on average, while _INFJ_ posts the weakest. _INFJ_ posts have, on the other hand, the maximum _sadness_ and _surprise_ scores. _INFP_ posts manifest the highest value of fear, while _ENTJ_ ones the minimum across all personalities.
+It looks like ISFJ and ESFJ tend to have the highest _love_ scores, while INTP has the lowest. 
+Expression of _joy_ appears to be relatively uniform across personality types, with a slightly higher score for ESFP. According to the analysis of text data, ESTJ posts convey the highest  _anger_ score on average, while INFJ posts the weakest. INFJ posts have, on the other hand, the maximum _sadness_ and _surprise_ scores. INFP posts manifest the highest value of fear, while ENTJ ones the minimum across all personalities.
 
 Of course these results should be interpreted with caution, as they are based on a limited and contaminated sample (let's remember that posts are not necessarily written by the corresponding personality type). 
 With that being said, I find them broadly consistent with what is known about the corresponding personality types.
 
-The __ISFJ__ (Introverted, Sensing, Feeling, Judging) and __ESFJ__ (Extraverted, Sensing, Feeling, Judging) personality types are known for their strong feelings and emotional sensitivity, which may explain why they tend to have higher scores on the _love_ emotion. The __INTP__ (Introverted, Intuitive, Thinking, Perceiving) personality type, on the other hand, is known for its logical and analytical approach to decision making, which may lead to a lower score on the _love_ emotion. This is confirmed by the fact that also other notoriously analytical types (like _ENTP_ and _ENTJ_) tend to have lower _love_ scores when compared to the other personalities.
+The __ISFJ__ (Introverted, Sensing, Feeling, Judging) and __ESFJ__ (Extraverted, Sensing, Feeling, Judging) personality types are known for their strong feelings and emotional sensitivity, which may explain why they tend to have higher scores on the _love_ emotion. The __INTP__ (Introverted, Intuitive, Thinking, Perceiving) personality type, on the other hand, is known for its logical and analytical approach to decision making, which may lead to a lower score on the _love_ emotion. This is confirmed by the fact that also other notoriously analytical types (like ENTP and ENTJ) tend to have lower _love_ scores when compared to the other personalities.
 
 The relatively uniform expression of _joy_ across personality types is consistent with the idea that this emotion is relatively universal and not strongly influenced by individual differences in personality. However, the slightly higher score for individuals with the __ESFP__ (Extraverted, Sensing, Feeling, Perceiving) personality type may be due to their outgoing and sociable nature, which could lead to a greater tendency to express _joy_ in written communication.
 
@@ -142,9 +142,9 @@ The higher _sadness_ and _surprise_ scores for __INFJ__ posts are consistent wit
 
 <br>
 
-The __sentiment__ of posts on various subreddits tends to be evenly split between positive and negative, but there are some exceptions. 
+The __sentiment__ of posts on various subreddits tends to be evenly split between _positive_ and _negative_, but there are some exceptions. 
 
-The __INFP__ subreddit, for example,  has a higher percentage of positive posts at 61%. It is interesting to notice that INFPs also had the highest fear score. __INTJ__, __INFJ__, __ENTJ__, __ISTJ__ and __ENTP__ (in that order) have the highest percentages of negative posts, ranging from 65% to 56%.
+The __INFP__ subreddit, for example,  has a higher percentage of _positive_ posts at 61%. It is interesting to notice that INFPs also had the highest _fear_ score. __INTJ__, __INFJ__, __ENTJ__, __ISTJ__ and __ENTP__ (in that order) have the highest percentages of _negative_ posts, ranging from 65% to 56%.
 
 In the following graph, you can see the results of a [__clustering__](https://it.wikipedia.org/wiki/Clustering) of different personalities, based on the sentiment of scraped text data. Each personality was represented as a vector containing the average value of each emotion and the percentage of posts classified with each sentiment. This brought to 6-dimensional vectors, which I projected in a two dimensional space applying a [PCA](https://it.wikipedia.org/wiki/Analisi_delle_componenti_principali). The following table shows how the original variables contributed to the Principal Components.
 
@@ -326,4 +326,4 @@ Thank you for reading, and until next time!
 
 _Sincerly,_
 
-_Alessia (an INFJ)_
+_Alessia (an INFJ)_.
