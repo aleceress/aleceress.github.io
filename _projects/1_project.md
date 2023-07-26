@@ -20,7 +20,6 @@ category: personal
 
 
 
-
 <link rel="stylesheet" href="{{ '/assets/css/slick.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/slick-theme.css' | relative_url }}">
 
@@ -148,7 +147,7 @@ The __INFP__ subreddit, for example,  has a higher percentage of _positive_ post
 
 In the following graph, you can see the results of a [__clustering__](https://it.wikipedia.org/wiki/Clustering) of different personalities, based on the sentiment of scraped text data. Each personality was represented as a vector containing the average value of each emotion and the percentage of posts classified with each sentiment. This brought to 6-dimensional vectors, which I projected in a two dimensional space applying a [PCA](https://it.wikipedia.org/wiki/Analisi_delle_componenti_principali). The following table shows how the original variables contributed to the Principal Components.
 
-
+<div style="overflow-x:auto;">
  <table border = "1" align = "center" style =  "border: 1px solid black; padding: 0, border-collapse: collapse;">
   <tr>
     <th></th>
@@ -184,6 +183,7 @@ In the following graph, you can see the results of a [__clustering__](https://it
     <td align = "right">0.12 </td>
   </tr>
 </table> 
+</div>
 
 <br>
 After performing principal component analysis, I utilized [K-Means clustering](https://en.wikipedia.org/wiki/K-means_clustering), whose fitting indicated that the optimal number of clusters was four, with the configuration shown.
@@ -211,15 +211,15 @@ In contrast to the non-aggregated analysis, for this case I did not use the aver
 
 To identify dependencies between traits and emotions and traits and sentiment, I used the following statistics.
 
-- __Chi squared__: The chi-squared test is a statistical test that is used to compare the __observed frequencies__ of events or categories in a sample to the __expected frequencies__ of those events or categories based on some theoretical expectation. It is used to determine whether there is a __significant difference__ between the observed frequencies and the expected frequencies, and can be used to test hypotheses about a population. 
+- __Chi Squared__: the Chi Squared test is a statistical test that is used to compare the __observed frequencies__ of events or categories in a sample to the __expected frequencies__ of those events or categories based on some theoretical expectation. It is used to determine whether there is a __significant difference__ between the observed frequencies and the expected frequencies, and can be used to test hypotheses about a population. 
   
   I used the chi-squared test to compare the number of posts classified as positive or negative, or the number of posts classified with a particular emotion versus all the others, in the presence or absence of a particular trait. The comparison was conducted using a contingency table with one degree of freedom, so the expected frequencies were computed based on the marginal sums under the assumption of independence.
 
   The __p-value__ in a chi-squared test is a measure of the probability that the differences between the observed and expected frequencies could have occurred by chance. A small p-value suggests that the observed differences are statistically significant and not likely due to chance alone, while a large p-value suggests that the observed differences are likely due to chance and are not statistically significant. 
 
-  I didn't include all the computed __p-values__ in this discussion because I found the following measure more intuitive. If you are interested in computation and results you can find them [here](https://github.com/aleceress/mbti_sentiment/blob/master/aggregate_analysis.ipynb), in the github repository in which I included all the code for this project.
+  I didn't include all the computed __p-values__ in this discussion because I found the following measure more intuitive. If you are interested in computation and results you can find them [here](https://github.com/aleceress/mbti_sentiment/blob/master/aggregate_analysis.ipynb), in the GitHub repository in which I included all the code for this project.
   
-- __Odds Ratio__: The odds ratio is a __measure of the relationship__ between two events or categories in a study. It is used to compare the odds of an event occurring in one group to the odds of the event occurring in another group.
+- __Odds Ratio__: the odds ratio is a __measure of the relationship__ between two events or categories in a study. It is used to compare the odds of an event occurring in one group to the odds of the event occurring in another group.
   I  computed the odds ratio to compare the odds of scoring _negative_ (or with a particular emotion) having one trait to the odds of doing so not having it (therefore, having the opposite one). An odds ratio greater than 1 indicates that the event is more likely to occur in the first group compared to the second group, while an odds ratio less than 1 indicates that the event is less likely to occur in the first group compared to the second group. You can find the _odds ratio_ with its _p values_ and the consequent interpretation in the caption of the following graphs. 
 
 
@@ -294,36 +294,43 @@ __Ni__ dominant individuals are often imaginative, introspective, and insightful
 __Extra tidbit__: I made Word Clouds for each subreddit using the text that I had scraped. I think they turned out really cute!
 <div class ="wordclouds">
   
-  <div style = "text-align:center"><img src="/assets/img/infj_wordcloud.webp" style = "margin:auto; padding: 10px" width="700" height="350" center=true><caption style="text-align:right"> INFJ </caption></div>
-  <div style = "text-align:center"><img src="/assets/img/intj_wordcloud.webp" style = "margin:auto; padding: 10px" width="700" height="350" center=true><caption style="text-align:right"> INTJ </caption></div>
-  <div style = "text-align:center"><img src="/assets/img/infp_wordcloud.webp" style = "margin:auto; padding: 10px" width="700" height="350" center=true><caption style="text-align:right"> INFP </caption></div>
-  <div style = "text-align:center"><img src="/assets/img/intj_wordcloud.webp" style = "margin:auto; padding: 10px" width="700" height="350" center=true><caption style="text-align:right"> INTP </caption></div>
-  <div style = "text-align:center"><img src="/assets/img/entj_wordcloud.webp" style = "margin:auto; padding: 10px" width="700" height="350" center=true><caption style="text-align:right"> ENTJ </caption></div>
-   <div style = "text-align:center"><img src="/assets/img/enfp_wordcloud.webp" style ="margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ENFP </caption></div>
-    <div style = "text-align:center"><img src="/assets/img/entp_wordcloud.webp" style ="margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ENTP </caption></div>
-  <div style = "text-align:center"><img src="/assets/img/enfj_wordcloud.webp" style = "margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ENFJ </caption></div>
-  <div style = "text-align:center"><img src="/assets/img/isfj_wordcloud.webp" style = "margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ISFJ </caption></div>
-   <div style = "text-align:center"><img src="/assets/img/istj_wordcloud.webp" style = "margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ISTJ </caption></div>
-   <div style = "text-align:center"><img src="/assets/img/istp_wordcloud.webp" style = "margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ISTP </caption></div>
-   <div style = "text-align:center"><img src="/assets/img/isfp_wordcloud.webp" style = "margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ISFP </caption></div>
-  <div style = "text-align:center"><img src="/assets/img/esfj_wordcloud.webp" style ="margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ESFJ </caption></div>
-   <div style = "text-align:center"><img src="/assets/img/estj_wordcloud.webp" style ="margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ESTJ </caption></div>
-    <div style = "text-align:center"><img src="/assets/img/estp_wordcloud.webp" style ="margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ESTP </caption></div>
-  <div style = "text-align:center"><img src="/assets/img/esfp_wordcloud.webp" style ="margin:auto; padding:10px" width="700" height="350" center=true><caption style="text-align:right"> ESFP </caption></div>
+  <div style = "text-align:center"><img src="/assets/img/infj_wordcloud.webp" style = "margin:auto; padding: 10px" width="100%" height="auto" center=true><caption style="text-align:right"> INFJ </caption></div>
+  <div style = "text-align:center"><img src="/assets/img/intj_wordcloud.webp" style = "margin:auto; padding: 10px" width="100%" height="auto" center=true><caption style="text-align:right"> INTJ </caption></div>
+  <div style = "text-align:center"><img src="/assets/img/infp_wordcloud.webp" style = "margin:auto; padding: 10px" width="100%" height="auto" center=true><caption style="text-align:right"> INFP </caption></div>
+  <div style = "text-align:center"><img src="/assets/img/intj_wordcloud.webp" style = "margin:auto; padding: 10px" width="100%" height="auto" center=true><caption style="text-align:right"> INTP </caption></div>
+  <div style = "text-align:center"><img src="/assets/img/entj_wordcloud.webp" style = "margin:auto; padding: 10px" width="100%" height="auto" center=true><caption style="text-align:right"> ENTJ </caption></div>
+   <div style = "text-align:center"><img src="/assets/img/enfp_wordcloud.webp" style ="margin:auto; padding:10px" width="100%" height="auto" center=true><caption style="text-align:right"> ENFP </caption></div>
+    <div style = "text-align:center"><img src="/assets/img/entp_wordcloud.webp" style ="margin:auto; padding:10px" width="100%" height="auto" center=true><caption style="text-align:right"> ENTP </caption></div>
+  <div style = "text-align:center"><img src="/assets/img/enfj_wordcloud.webp" style = "margin:auto; padding:10px" width="100%" height="auto" center=true><caption style="text-align:right"> ENFJ </caption></div>
+  <div style = "text-align:center"><img src="/assets/img/isfj_wordcloud.webp" style = "margin:auto; padding:10px" width="100%" height="auto" center=true><caption style="text-align:right"> ISFJ </caption></div>
+   <div style = "text-align:center"><img src="/assets/img/istj_wordcloud.webp" style = "margin:auto; padding:10px" width="100%" height="auto" center=true><caption style="text-align:right"> ISTJ </caption></div>
+   <div style = "text-align:center"><img src="/assets/img/istp_wordcloud.webp" style = "margin:auto; padding:10px" width="100%" height="auto" center=true><caption style="text-align:right"> ISTP </caption></div>
+   <div style = "text-align:center"><img src="/assets/img/isfp_wordcloud.webp" style = "margin:auto; padding:10px" width="100%" height="auto" center=true><caption style="text-align:right"> ISFP </caption></div>
+  <div style = "text-align:center"><img src="/assets/img/esfj_wordcloud.webp" style ="margin:auto; padding:10px" width="100%" height="auto" center=true><caption style="text-align:right"> ESFJ </caption></div>
+   <div style = "text-align:center"><img src="/assets/img/estj_wordcloud.webp" style ="margin:auto; padding:10px" width="100%" height="auto" center=true><caption style="text-align:right"> ESTJ </caption></div>
+    <div style = "text-align:center"><img src="/assets/img/estp_wordcloud.webp" style ="margin:auto; padding:10px" width="100%" height="auto" center=true><caption style="text-align:right"> ESTP </caption></div>
+  <div style = "text-align:center"><img src="/assets/img/esfp_wordcloud.webp" style ="margin:auto; padding:10px" width="100%" height="auto" center=true><caption style="text-align:right"> ESFP </caption></div>
   
 </div>
 
 <script>
-    $(".wordclouds").slick({
-      dots: true
-    })
+  $(".wordclouds").slick({
+    dots: true
+  })
+    
 </script>
 
 #### Conclusion 
 
-While it was not the goal of this study to arrive at a definitive conclusion, it was interesting to approach the topic from a data analysis perspective and observe any similarities between my prior knowledge, expectations, and results. If you have any questions or comments, please do not hesitate to contact me. I hope you enjoyed this exploration and found the interactive graphs engaging.
+While it was not the goal of this study to arrive at a definitive conclusion, it was interesting to approach the topic from a data analysis perspective and observe any similarities between my prior knowledge, expectations, and results. 
+
+If you have any questions or comments, please do not hesitate to contact me. If you want to deepen the topic, you can have a look at the code and the analyisis on the [GitHub respository](https://github.com/aleceress/mbti_sentiment) (and maybe give me a star!).
+
+I hope you enjoyed this exploration and found the interactive graphs engaging.
 Thank you for reading, and until next time!
 
 _Sincerly,_
 
 _Alessia (an INFJ)_.
+
+<script async src="https://comments.app/js/widget.js?3" data-comments-app-website="KRdv5SSt" data-limit="5" data-color="B509AC"></script>
