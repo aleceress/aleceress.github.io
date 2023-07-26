@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}" >
     <link rel="stylesheet" href="{{ '/assets/css/mdb.min.css' | relative_url }}" >
 
+    <!-- Bootstrap Table -->
+    <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@{{ site.bootstrap-table.version }}/dist/bootstrap-table.min.css">
+
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="{{ '/assets/css/fontawesome.min.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url }}">
@@ -16,15 +19,20 @@
     <!-- Plotly -->
     <script src="{{ '/assets/js/plotly-2.16.1.min.js' | relative_url }}"></script>
 
+    {% if page.toc and page.toc.sidebar %}
+    <!-- Sidebar Table of Contents -->
+    <link href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" rel="stylesheet" />
+    {% endif %}
+
     <!-- Styles -->
-    {% if site.icon.size < 3 %}
+    {% if site.icon.size <= 4 %}
     <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{ site.icon }}</text></svg>">
     {% elsif site.icon != blank %}
     <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url}}"/>
     {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="canonical" href="{{ site.canonical_url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
-    
+
     <!-- Dark Mode -->
     {% if site.enable_darkmode %}
     <link rel="stylesheet" href="{{ '/assets/css/jekyll-pygments-dark.min.css' | relative_url }}" media="none" id="highlight_theme_dark" />
