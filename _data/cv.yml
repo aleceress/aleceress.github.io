@@ -40,10 +40,10 @@
   type: time_table
   contents:
     - title: Data Scientist
-        institution: Laife Reply
-        year: 2023 - NOW
-        description:
-          - LAIFE is the data company of the Reply group specialized in the creation of Digital Healthcare and Digital Life Science Solutions.
+      institution: Laife Reply
+      year: 2023 - NOW
+      description:
+        - LAIFE is the data company of the Reply group specialized in the creation of Digital Healthcare and Digital Life Science Solutions.
     - title: Programming Tutor
       institution: University of Milan
       year: 2021 - 2023
