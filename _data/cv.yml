@@ -39,16 +39,16 @@
 - title: Experience
   type: time_table
   contents:
-  - title: Data Scientist
-      institution: Laife Reply
-      year: 2023 - NOW
+    - title: Data Scientist
+        institution: Laife Reply
+        year: 2023 - NOW
+        description:
+          - LAIFE is the data company of the Reply group specialized in the creation of Digital Healthcare and Digital Life Science Solutions.
+    - title: Programming Tutor
+      institution: University of Milan
+      year: 2021 - 2023
       description:
-        - LAIFE is the data company of the Reply group specialized in the creation of Digital Healthcare and Digital Life Science Solutions.
-  - title: Programming Tutor
-    institution: University of Milan
-    year: 2021 - 2023
-    description:
-      - During my MSc, I assisted the lab teacher in Programming I lectures. My role was answering students' questions and helping them build the necessary problem solving skills to go on with their Computer Science studies.
+        - During my MSc, I assisted the lab teacher in Programming I lectures. My role was answering students' questions and helping them build the necessary problem solving skills to go on with their Computer Science studies.
     
 
 - title: Open Source Projects
