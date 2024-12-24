@@ -43,7 +43,14 @@
       institution: Laife Reply
       year: 2023 - NOW
       description:
-        - LAIFE is the data company of the Reply group specialized in the creation of Digital Healthcare and Digital Life Science Solutions.
+        - >
+          <strong>Clinical Data Platforms</strong>: collaborated on the creation of centralized Clinical Data Platforms for leading healthcare institutions, developing data pipelines to process clinical file formats and integrating structured and unstructured data across Azure, Google Cloud Platform (GCP), and Microsoft Fabric environments.
+        - >
+          <strong>Generative AI R&D</strong>: contributed to the development of an AI prototype for automatic Patient Summary generation, utilizing advanced Generative AI models, Google Gemini, and LangChain to streamline the synthesis of clinical information.
+        - >
+          <strong>Predictive Model Development</strong>: designed a predictive model to assess the risk of anastomotic dehiscence (AD) after colorectal cancer surgeries and conducted a comprehensive analysis of risk factors to support clinical decision-making.
+        - >
+          <strong>Data Integration and Visualization</strong>: supported the design of Data Lakes, developed data pipelines, and created dashboards in Power BI for monitoring infectious disease cases.
     - title: Programming Tutor
       institution: University of Milan
       year: 2021 - 2023
@@ -83,5 +90,5 @@
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Singing and Creative writing
+    - <u>Hobbies:</u> Singing, creative writing, reading and movies
 
